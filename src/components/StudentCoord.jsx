@@ -46,7 +46,7 @@ const StudentCoord = () => {
     sectionTitle: { textAlign: "center", marginBottom: "30px", color: "#333", fontSize: "2rem" },
     cardsGrid: {
       display: "grid",
-      gridTemplateColumns: "repeat(4, 1fr)",
+      gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", // 👈 Auto adjust columns
       gap: "20px",
       justifyItems: "center",
     },
@@ -57,7 +57,8 @@ const StudentCoord = () => {
       borderRadius: "10px",
       overflow: "hidden",
       boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-      transition: "transform 0.3s ease"
+      transition: "transform 0.3s ease",
+      textAlign: "center",
     },
     imageWrapper: {
       width: "100%",
@@ -72,24 +73,36 @@ const StudentCoord = () => {
       width: "100%",
       height: "100%",
       objectFit: "cover",
-      objectPosition: "center 20%" // 👈 This shifts the image down slightly
+      objectPosition: "center 20%"
     },
     personInfo: {
       padding: "12px",
-      textAlign: "center",
     },
     personName: {
       margin: "0",
-      fontSize: "1rem",
+      fontSize: "1rem", // Default for desktop
       fontWeight: "600",
-      color: "#333"
+      color: "#333",
     },
     personDesignation: {
       margin: "4px 0 0",
       fontSize: "0.85rem",
-      color: "#777"
+      color: "#777",
+    },
+    // Responsive styles
+    '@media (max-width: 600px)': {
+      sectionTitle: {
+        fontSize: "1.5rem"
+      },
+      personName: {
+        fontSize: "0.9rem", // 👈 Smaller name on small screens
+      },
+      personDesignation: {
+        fontSize: "0.75rem", // 👈 Smaller designation on small screens
+      }
     }
   };
+  
 
   return (
     <div style={styles.pageContainer}>
