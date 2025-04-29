@@ -20,7 +20,7 @@ import quantum from "../photo/quantum.jpg";
 import adhoc from "../photo/adhoc.jpg";
 
 const ThemeCards = () => {
-  const formLink = "https://docs.google.com/forms/d/1W5hHTCvJaAPMP6XnKkwv_3FvV2i8bqGyKFtEnz_Z4QY/edit";
+  const formLink = "https://docs.google.com/forms/d/1RW7LHjCk1n6TVqpZqj9yN-AcM1LSsHIbJdwPRzsIxPY/edit?ts=680e0dd3";
 
   const colorPalette = [
     "#FF6B6B", "#4ECDC4", "#45B7D1", "#A78BFA",
